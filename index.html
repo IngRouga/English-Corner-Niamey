@@ -550,7 +550,6 @@ footer{background:var(--navy-deep);color:#B9C2D6;padding:64px 0 30px;}
       <a href="#about" data-i18n="nav.about"></a>
       <a href="#programs" data-i18n="nav.programs"></a>
       <a href="#levels" data-i18n="nav.levels"></a>
-      <a href="#test-cta" data-i18n="nav.test"></a>
       <a href="#schedule" data-i18n="nav.schedule"></a>
       <a href="#activities" data-i18n="nav.activities"></a>
       <a href="#contact" data-i18n="nav.contact"></a>
@@ -571,7 +570,6 @@ footer{background:var(--navy-deep);color:#B9C2D6;padding:64px 0 30px;}
     <a href="#about" data-i18n="nav.about" onclick="closeMobile()"></a>
     <a href="#programs" data-i18n="nav.programs" onclick="closeMobile()"></a>
     <a href="#levels" data-i18n="nav.levels" onclick="closeMobile()"></a>
-    <a href="#test-cta" data-i18n="nav.test" onclick="closeMobile()"></a>
     <a href="#schedule" data-i18n="nav.schedule" onclick="closeMobile()"></a>
     <a href="#activities" data-i18n="nav.activities" onclick="closeMobile()"></a>
     <a href="#contact" data-i18n="nav.contact" onclick="closeMobile()"></a>
@@ -606,27 +604,6 @@ footer{background:var(--navy-deep);color:#B9C2D6;padding:64px 0 30px;}
 </section>
 
 <div class="marquee" aria-hidden="true"><div class="track" id="mq-track"></div></div>
-
-<section id="test-cta" class="section">
-  <div class="wrap test-cta-inner">
-    <div>
-      <div class="eyebrow" data-i18n="cta.eyebrow"></div>
-      <h2 data-i18n="cta.h2"></h2>
-      <p data-i18n="cta.p"></p>
-      <a href="#" class="btn btn-primary" data-i18n="cta.btn" onclick="openTest(); return false;"></a>
-    </div>
-    <div class="test-panel">
-      <h3 data-i18n="cta.panel"></h3>
-      <div class="meta">
-        <div class="test-meta-item"><b>25</b>&nbsp;<span data-i18n="cta.questions"></span></div>
-        <div class="test-meta-item"><b>~10</b>&nbsp;<span data-i18n="cta.minutes"></span></div>
-        <div class="test-meta-item"><b>0</b>&nbsp;FCFA</div>
-      </div>
-      <div class="intro-cats" id="cta-cats"></div>
-      <a href="#" class="btn btn-navy" style="width:100%;justify-content:center;" data-i18n="cta.startFree" onclick="openTest(); return false;"></a>
-    </div>
-  </div>
-</section>
 
 <section class="section">
   <div class="wrap">
@@ -791,7 +768,6 @@ footer{background:var(--navy-deep);color:#B9C2D6;padding:64px 0 30px;}
         <a href="#hero" data-i18n="nav.home"></a>
         <a href="#about" data-i18n="nav.about"></a>
         <a href="#programs" data-i18n="nav.programs"></a>
-        <a href="#test-cta" data-i18n="nav.test"></a>
       </div>
       <div class="footer-col">
         <h5 data-i18n="foot.info"></h5>
@@ -1090,7 +1066,6 @@ const CATS=["Grammar","Vocabulary","Reading comprehension","Everyday English","S
 function renderDynamic(){
   const mq=[1,2,3,4,5,6,7].map(i=>`<span>${t("mq."+i)}</span><i>★</i>`).join("");
   document.getElementById("mq-track").innerHTML=mq+mq+mq+mq;
-  document.getElementById("cta-cats").innerHTML=CATS.map(c=>`<span class="intro-cat">${t("cat."+c)}</span>`).join("");
   document.getElementById("prog-grid").innerHTML=PROGRAMS.map(p=>`
     <div class="prog-card"><span class="prog-tag">${t(p.tag)}</span><h3>${t(p.name)}</h3>
     <div class="prog-rows">${p.rows.map(r=>`<div class="prog-row"><span>${t(r[0])}</span><span>${r[2]?t(r[1]):r[1]}</span></div>`).join("")}</div>
